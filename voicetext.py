@@ -17,7 +17,11 @@ def voicetext(textfile, outfile, speaker, speed):
 if __name__ == "__main__":
     import sys
     argv = sys.argv
-    speaker='hikari'
+    if argv[3] == 'h':
+        speaker='hikari'
+    else:
+#        speaker='show'
+        speaker='takeru'
     speed=100
     print('VoiceText start: ', argv[1])
     voicetext(argv[1], argv[2], speaker, speed)
