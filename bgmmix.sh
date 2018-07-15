@@ -10,7 +10,8 @@ zero.wav echoed1.wav \
 zero.wav echoed2.wav \
 -c 2 \
 loop.wav
-sox loop.wav loop2.wav delay 0 0.03
+sox loop.wav loop2.wav delay 0 0.01
 sox -m loop2.wav bgm.wav output.wav
-rm bgm.wav 
-play output.wav
+lame output.wav output.mp3
+rm *.wav
+play output.mp3
